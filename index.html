@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script src="loop.js"></script>
+<script src="calculateArea.js"></script>
+<script src = "Class.js"></script>
+<script src="Generator.js"></script>
+<script src="Promises.js"></script>
+<script>
+window.onload = () => {
+    loop(5, callback);
+    loop (5);
+
+  // второе задание
+  calculateArea(5, 10);
+
+  // третье задание
+  let newHuman = new Human('Вася', 45, '11.05.1973');
+  let newEmployee = new Employee('Вася', 45, '11.03.1973', 500, "JS");
+  let newManager = new Manager('Витя', 40, '11.06.1978', 500, "JS");
+
+  let developerAndrey = new Developer('Андрей', 36, '11.08.1982', 300, "JS");
+  let developerFedya = new Developer('Федя', 33, '11.11.1985', 300, "JS");
+
+  newManager.addDeveloper(developerAndrey, developerFedya);
+
+  newManager.removeDeveloper(developerAndrey);
+  developerFedya.managerForDeveloper = newManager;
+  developerAndrey.showManager;
+
+  // четвёртое задание
+
+let personalData = personalFile(iterator.next().value, iterator.next().value, iterator.next().value);
+  console.log(personalData);
+
+  // пятое задание
+
+  for (let i=1; i<11; i++) {
+    getJSON(`https://jsonplaceholder.typicode.com/users/${i}`)
+      .then((result) => {
+        array.push(result)});
+  }
+
+  console.log(array);
+
+
+};
+
+</script>
+
+</body>
+</html>
